@@ -1,0 +1,98 @@
+<!DOCTYPE html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="author" content="github.com/wellisf" />
+	<meta name="title" content="Dice">
+	<meta name="description" content="Simulador de prova">
+	<meta name="keywords" content="dado, d&D, dice, ded, D&D, d&d" />
+	<meta name="robots" content="dado, d&D, dice, ded, D&D, d&d">
+
+	<title> Dice </title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script>
+		function all_dice(){
+			var i = 4
+			while( i < 13) {
+				thrown_dice(i);
+				i += 2;
+			}
+			thrown_dice(20);
+			thrown_dice(30);
+			thrown_dice(100);
+		}
+
+		function thrown_dice(d) {
+		  var dice = Math.floor((Math.random() * d) + 1);
+		  document.getElementById("d" + d).innerHTML = 'D' + d + ': ' + dice;
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="panel panel-primary">
+
+		<div class="page-header"> 
+			<h1 align="center"> Dice <button type="button" onclick="all_dice()"> <img src="image/dice.png" alt="dices" height="70" width="70"> </button> 
+			</h1> 
+		</div>			
+
+	 	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d4.png" alt="">
+							<h2 id="d4" align="center"> </h2>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d6.png" alt="">
+							<h2 id="d6" align="center"> </h2>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d8.png" alt="">
+							<h2 id="d8" align="center"> </h2>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d10.png" alt="">
+							<h2 id="d10" align="center"> </h2>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d12.png" alt="">
+							<h2 id="d12" align="center"> </h2>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d20.png" alt="">
+							<h2 id="d20" align="center"> </h2>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d30.png" alt="">
+							<h2 id="d30" align="center"> </h2>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+							<img class="img-responsive" src="image/d100.png" alt="">
+							<h2 id="d100" align="center"> </h2>
+        </div>
+
+		<br> <br>
+		<p>log: </p>
+
+	</div>
+</div>
+</body>
+</html>
